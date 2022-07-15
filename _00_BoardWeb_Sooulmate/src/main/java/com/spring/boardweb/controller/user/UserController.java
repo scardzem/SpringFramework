@@ -66,4 +66,11 @@ public class UserController {
 		
 		return json;
 	}
+	
+	@RequestMapping("/signup.do")
+	public String signup() {
+		return "user/signup";
+	}
+	
+	
 }

@@ -20,4 +20,16 @@ public class BoardController {
 	public String insertBoard() {
 		return "board/insertBoard";
 	}
+	
+	@RequestMapping("/mainpage.do")
+	public String mainpage() {
+		return "board/mainpage";
+	}
+	
+	@RequestMapping("/intropage.do")
+	public String intropage() {
+		return "board/intropage";
+	}
+
+	
 }

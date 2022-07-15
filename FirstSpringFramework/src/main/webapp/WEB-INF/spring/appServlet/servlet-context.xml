@@ -22,13 +22,14 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<!-- 어느 패키지에서 어노테이션을 읽어서 객체를 생성 할 지 결정하는 설정 -->
+	<!-- 어느 패키지에서 어노테이션을 읽어서 객체를 생성할 지 결정하는 설정 -->
 	<context:component-scan base-package="com.spring.controller" />
 	
-	<!-- bean으로 객체 생성할 때는 클래스를 추가할 때마다 bean을 추가해줘야 된다. -->
+	<!-- bean으로 객체 생성할 때는 클래스를 추가할 때마다 bean을 추가해줘야된다. -->
 	<!-- 웹 어플리케이션에서 공통적으로 사용될 객체들은 bean 객체로 생성하고
-		 업무로직 객체들은 어노테이션을 이용한다. -->
-	<!-- <beans:bean class="com.spring.controller.HomeController"></beans:bean> -->
-	
+	     업무로직 객체들은 어노테이션을 이용한다. -->
+	<!-- <beans:bean class="com.spring.controller.HomeController"></beans:bean>
+	<beans:bean class="com.spring.controller.UserController"></beans:bean>
+	<beans:bean class="com.spring.controller.FreeBoardeController"></beans:bean> -->
 	
 </beans:beans>

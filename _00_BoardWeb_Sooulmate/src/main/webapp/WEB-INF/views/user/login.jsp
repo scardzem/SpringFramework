@@ -3,59 +3,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-	.form-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	#loginForm{
-		width: 250px;
-		text-align: center;
-	}
-	
-	#loginForm .label-wrapper {
-		margin-top: 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	
-	#loginForm input{
-		width: 100%;
-	}
-	
-	#loginForm div {
-		display: flex;
-		align-items: center;
-	}
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/css/login_style.css">
+    <title>login</title>
+    <link rel="icon" type="image/png" href="${pageContext.request.contextPath }/img/logo.png">
+
 </head>
 <body>
-	<jsp:include page="${pageContext.request.contextPath }/header.jsp"></jsp:include>
-	<div class="form-wrapper">
-		<form id="loginForm">
-			<h3>로그인</h3>
-			<div class="label-wrapper">
-				<label for="userId">아이디</label>
-			</div>
-			<input type="text" id="userId" name="userId" required>
-			
-			<div class="label-wrapper">
-				<label for="userPw">비밀번호</label>
-			</div>
-			<input type="password" id="userPw" name="userPw" required>
-			
-			<div style="display:block; margin: 20px auto;">
-				<button type="button" id="btnLogin">로그인</button>
-			</div>
-			
-		</form>
-	</div>
-	<jsp:include page="${pageContext.request.contextPath }/footer.jsp"></jsp:include>
+    <div class="logobox">
+        <a href="#">
+            <img src="img/logo.png" alt="로고">
+        </a>
+    </div>
+    <div class="loginbox">
+        <form action="#">
+            <div class="input-wrap1">
+                <label for="loginid"><img src="img/loginimg.png" alt="loginlogo" id="loginimg"></label>
+                <input type="text" id="loginid" placeholder="Username"required>
+            </div>
+            <div class="input-wrap1">
+                <label for="loginpw"><img src="img/pwimg.png" alt="pwlogo" id="pwimg"></label>
+                <input type="password" id="loginid" placeholder="****">
+            </div>
+            <div class="input-wrap">
+                <button type="button" id="btn" onclick="location.href='intropage.html';">Login</button>
+              
+            </div>
+            <div class="input-wrap2">
+                <a href="signup.html" id="btn2">Sign in</a>
+            </div>
+        </form>
+    </div>
+    
 </body>
 </html>
